@@ -1,986 +1,1070 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schoolie - Online Tutoring Platform</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Schoolie - Online Tutoring Platform</title>
-
-  <!-- 
+    <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
 
-  <!-- 
+    <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!-- 
+    <!-- 
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- 
+    <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
-  <link rel="preload" as="image" href="./assets/images/hero-abs-1.png" media="min-width(768px)">
-  <link rel="preload" as="image" href="./assets/images/hero-abs-2.png" media="min-width(768px)">
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/hero-abs-1.png"
+      media="min-width(768px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/hero-abs-2.png"
+      media="min-width(768px)"
+    />
+  </head>
 
-</head>
-
-<body id="top">
-
-  <!-- 
+  <body id="top">
+    <!-- 
     - #HEADER
   -->
 
-  <header class="header" data-header>
-    <div class="container">
+    <header class="header" data-header>
+      <div class="container">
+        <h1>
+          <a href="#" class="logo">Schoolie AI</a>
+        </h1>
 
-      <h1>
-        <a href="#" class="logo">Schoolie AI</a>
-      </h1>
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="#" class="logo">Schoolie</a>
 
-      <nav class="navbar" data-navbar>
+            <button
+              class="nav-close-btn"
+              aria-label="Close menu"
+              data-nav-toggler
+            >
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
 
-        <div class="navbar-top">
-          <a href="#" class="logo">Schoolie</a>
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#home" class="navbar-link" data-nav-toggler>Home</a>
+            </li>
 
-          <button class="nav-close-btn" aria-label="Close menu" data-nav-toggler>
-            <ion-icon name="close-outline"></ion-icon>
+            <li class="navbar-item">
+              <a href="#about" class="navbar-link" data-nav-toggler>About</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#courses" class="navbar-link" data-nav-toggler
+                >Courses</a
+              >
+            </li>
+
+            <li class="navbar-item">
+              <a href="#join" class="navbar-link" data-nav-toggler>Join</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#footer" class="navbar-link" data-nav-toggler>Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="header-action-btn"
+            aria-label="Open search"
+            data-search-toggler
+          >
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+          <a
+            href="https://schoolie-lms.vercel.app"
+            class="header-action-btn login-btn"
+          >
+            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+            <span class="span">Login / Register</span>
+          </a>
+
+          <button
+            class="header-action-btn nav-open-btn"
+            aria-label="Open menu"
+            data-nav-toggler
+          >
+            <ion-icon name="menu-outline"></ion-icon>
           </button>
         </div>
 
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="#home" class="navbar-link" data-nav-toggler>Home</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#about" class="navbar-link" data-nav-toggler>About</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#courses" class="navbar-link" data-nav-toggler>Courses</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#join" class="navbar-link" data-nav-toggler>Join</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#footer" class="navbar-link" data-nav-toggler>Contact</a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <div class="header-actions">
-
-        <button class="header-action-btn" aria-label="Open search" data-search-toggler>
-          <ion-icon name="search-outline"></ion-icon>
-        </button>
-
-        <a href="https://schoolie-lms.vercel.app" class="header-action-btn login-btn">
-          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-
-          <span class="span">Login / Register</span>
-        </a>
-
-        <button class="header-action-btn nav-open-btn" aria-label="Open menu" data-nav-toggler>
-          <ion-icon name="menu-outline"></ion-icon>
-        </button>
-
+        <div class="overlay" data-nav-toggler data-overlay></div>
       </div>
+    </header>
 
-      <div class="overlay" data-nav-toggler data-overlay></div>
-
-    </div>
-  </header>
-
-
-
-
-
-  <!-- 
+    <!-- 
     - #SEARCH BOX
   -->
 
-  <div class="search-container" data-search-box>
-    <div class="container">
-
-      <button class="search-close-btn" aria-label="Close search" data-search-toggler>
-        <ion-icon name="close-outline"></ion-icon>
-      </button>
-
-      <div class="search-wrapper">
-        <input type="search" name="search" placeholder="Search Here..." aria-label="Search" class="search-field">
-
-        <button class="search-submit" aria-label="Submit" data-search-toggler>
-          <ion-icon name="search-outline"></ion-icon>
+    <div class="search-container" data-search-box>
+      <div class="container">
+        <button
+          class="search-close-btn"
+          aria-label="Close search"
+          data-search-toggler
+        >
+          <ion-icon name="close-outline"></ion-icon>
         </button>
+
+        <div class="search-wrapper">
+          <input
+            type="search"
+            name="search"
+            placeholder="Search Here..."
+            aria-label="Search"
+            class="search-field"
+          />
+
+          <button class="search-submit" aria-label="Submit" data-search-toggler>
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
       </div>
-
     </div>
-  </div>
 
-
-
-
-
-  <main>
-    <article>
-
-      <!-- 
+    <main>
+      <article>
+        <!-- 
         - #HERO
       -->
 
-      <section class="hero" id="home" aria-label="hero" style="background-image: url('./assets/images/hero-bg.jpg')">
-        <div class="container">
+        <section
+          class="hero"
+          id="home"
+          aria-label="hero"
+          style="background-image: url('./assets/images/hero-bg.jpg')"
+        >
+          <div class="container">
+            <div class="hero-content">
+              <p class="section-subtitle">A Tutor who's always available</p>
 
-          <div class="hero-content">
+              <h2 class="h1 hero-title">Empower Learning with AI</h2>
 
-            <p class="section-subtitle">A Tutor who's always available</p>
+              <p class="hero-text">
+                Schoolie offers a web-based platform for students to do class
+                revision and get assistance from our advanced AI tutor and also
+                get access to hundreds of virtual classes from our qualified
+                instructors.
+              </p>
 
-            <h2 class="h1 hero-title">Empower Learning with AI</h2>
+              <a href="https://schoolie-lms.vercel.app" class="btn btn-primary">
+                <span class="span">Get Started Today</span>
 
-            <p class="hero-text">
-              Schoolie offers a web-based platform for students to do class revision and get assistance from our advanced AI tutor and
-              also get access to hundreds of virtual classes from our qualified instructors.
-            </p>
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </div>
 
-            <a href="https://schoolie-lms.vercel.app" class="btn btn-primary">
-              <span class="span">Get Started Today</span>
-
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-
+            <figure>
+              <img
+                src="./assets/images/hero-background.png"
+                width="600"
+                height="600"
+                loading="lazy"
+                alt="hero image"
+                class="w-100"
+              />
+            </figure>
           </div>
+        </section>
 
-          <figure>
-
-            <img src="./assets/images/hero-background.png" width="600" height="600" loading="lazy" alt="hero image"
-              class="w-100">
-
-
-          </figure>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
+        <!-- 
         - #CATEGORY
       -->
 
-      <section class="section category" aria-label="category">
-        <div class="container">
+        <section class="section category" aria-label="category">
+          <div class="container">
+            <p class="section-subtitle">Course Categories</p>
 
-          <p class="section-subtitle">Course Categories</p>
+            <h2 class="h2 section-title">Popular Topics To Learn</h2>
 
-          <h2 class="h2 section-title">Popular Topics To Learn</h2>
+            <ul class="grid-list">
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="calculator-outline"></ion-icon>
+                  </div>
 
-          <ul class="grid-list">
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Mathematics</a>
+                    </h3>
 
-            <li>
-              <div class="category-card">
-
-                <div class="card-icon">
-                  <ion-icon name="calculator-outline"></ion-icon>
+                    <span class="card-meta">Primary & Secondary</span>
+                  </div>
                 </div>
+              </li>
 
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">Mathematics</a>
-                  </h3>
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="flask-outline"></ion-icon>
+                  </div>
 
-                  <span class="card-meta">Primary & Secondary</span>
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Science</a>
+                    </h3>
+
+                    <span class="card-meta">Primary</span>
+                  </div>
                 </div>
+              </li>
 
-              </div>
-            </li>
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="color-palette-outline"></ion-icon>
+                  </div>
 
-            <li>
-              <div class="category-card">
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Art & Design</a>
+                    </h3>
 
-                <div class="card-icon">
-                  <ion-icon name="flask-outline"></ion-icon>
+                    <span class="card-meta">All Levels</span>
+                  </div>
                 </div>
+              </li>
 
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">Science</a>
-                  </h3>
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="code-slash-outline"></ion-icon>
+                  </div>
 
-                  <span class="card-meta">Primary</span>
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Programming</a>
+                    </h3>
+
+                    <span class="card-meta">Beginners</span>
+                  </div>
                 </div>
+              </li>
 
-              </div>
-            </li>
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="laptop-outline"></ion-icon>
+                  </div>
 
-            <li>
-              <div class="category-card">
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">ICT</a>
+                    </h3>
 
-                <div class="card-icon">
-                  <ion-icon name="color-palette-outline"></ion-icon>
+                    <span class="card-meta">Primary & Secondary</span>
+                  </div>
                 </div>
+              </li>
 
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">Art & Design</a>
-                  </h3>
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="accessibility-outline"></ion-icon>
+                  </div>
 
-                  <span class="card-meta">All Levels</span>
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Social Studies</a>
+                    </h3>
+
+                    <span class="card-meta">Primary</span>
+                  </div>
                 </div>
+              </li>
 
-              </div>
-            </li>
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                  </div>
 
-            <li>
-              <div class="category-card">
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">English & French</a>
+                    </h3>
 
-                <div class="card-icon">
-                  <ion-icon name="code-slash-outline"></ion-icon>
+                    <span class="card-meta">All Levels</span>
+                  </div>
                 </div>
+              </li>
 
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">Programming</a>
-                  </h3>
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="earth-outline"></ion-icon>
+                  </div>
 
-                  <span class="card-meta">Beginners</span>
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Geography</a>
+                    </h3>
+
+                    <span class="card-meta">Secondary</span>
+                  </div>
                 </div>
+              </li>
 
-              </div>
-            </li>
+              <li>
+                <div class="category-card">
+                  <div class="card-icon">
+                    <ion-icon name="medkit-outline"></ion-icon>
+                  </div>
 
-            <li>
-              <div class="category-card">
+                  <div>
+                    <h3 class="h3 card-title">
+                      <a href="#">Budgeting</a>
+                    </h3>
 
-                <div class="card-icon">
-                  <ion-icon name="laptop-outline"></ion-icon>
+                    <span class="card-meta">Beginners</span>
+                  </div>
                 </div>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">ICT</a>
-                  </h3>
-
-                  <span class="card-meta">Primary & Secondary</span>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card">
-
-                <div class="card-icon">
-                  <ion-icon name="accessibility-outline"></ion-icon>
-                </div>
-
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">Social Studies</a>
-                  </h3>
-
-                  <span class="card-meta">Primary</span>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card">
-
-                <div class="card-icon">
-                  <ion-icon name="chatbubbles-outline"></ion-icon>
-                </div>
-
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">English & French</a>
-                  </h3>
-
-                  <span class="card-meta">All Levels</span>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card">
-
-                <div class="card-icon">
-                  <ion-icon name="earth-outline"></ion-icon>
-                </div>
-
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">Geography</a>
-                  </h3>
-
-                  <span class="card-meta">Secondary</span>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card">
-
-                <div class="card-icon">
-                  <ion-icon name="medkit-outline"></ion-icon>
-                </div>
-
-                <div>
-                  <h3 class="h3 card-title">
-                    <a href="#">Budgeting</a>
-                  </h3>
-
-                  <span class="card-meta">Beginners</span>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
+        <!-- 
         - #ABOUT
       -->
 
-      <section class="section about" id="about" aria-label="about">
-        <div class="container">
+        <section class="section about" id="about" aria-label="about">
+          <div class="container">
+            <figure class="about-banner">
+              <img
+                src="./assets/images/nine.jpeg"
+                width="450"
+                height="590"
+                loading="lazy"
+                alt="about banner"
+                class="w-100 about-img"
+              />
 
-          <figure class="about-banner">
+              <img
+                src="./assets/images/img-1.jpg"
+                width="188"
+                height="242"
+                loading="lazy"
+                aria-hidden="true"
+                class="abs-img abs-img-1"
+              />
 
-            <img src="./assets/images/nine.jpeg" width="450" height="590" loading="lazy" alt="about banner"
-              class="w-100 about-img">
+              <img
+                src="./assets/images/img-2.webp"
+                width="150"
+                height="200"
+                loading="lazy"
+                aria-hidden="true"
+                class="abs-img abs-img-2"
+              />
+            </figure>
 
-            <img src="./assets/images/img-1.jpg" width="188" height="242" loading="lazy" aria-hidden="true"
-              class="abs-img abs-img-1">
+            <div class="about-content">
+              <p class="section-subtitle">Who We Are</p>
 
-            <img src="./assets/images/img-2.webp" width="150" height="200" loading="lazy" aria-hidden="true"
-              class="abs-img abs-img-2">
+              <h2 class="h2 section-title">Online Tutoring platform</h2>
 
-          </figure>
+              <ul class="about-list">
+                <li class="about-item">
+                  <div class="item-icon item-icon-1">
+                    <img
+                      src="./assets/images/about-icon-1.png"
+                      width="30"
+                      height="30"
+                      loading="lazy"
+                      aria-hidden="true"
+                    />
+                  </div>
 
-          <div class="about-content">
+                  <div>
+                    <h3 class="h3 item-title">Industry Expert Instructors</h3>
 
-            <p class="section-subtitle">Who We Are</p>
+                    <p class="item-text">
+                      Our tutoring platform encompasses hundreds of courses from
+                      our qualified instructors and tutors in fields like STEM,
+                      English, French, Kinyarwanda and many more.
+                    </p>
+                  </div>
+                </li>
 
-            <h2 class="h2 section-title">Online Tutoring platform</h2>
+                <li class="about-item">
+                  <div class="item-icon item-icon-2">
+                    <img
+                      src="./assets/images/about-icon-2.png"
+                      width="30"
+                      height="30"
+                      loading="lazy"
+                      aria-hidden="true"
+                    />
+                  </div>
 
-            <ul class="about-list">
+                  <div>
+                    <h3 class="h3 item-title">Up-to-Date Course Content</h3>
 
-              <li class="about-item">
+                    <p class="item-text">
+                      Courses offered on Schoolie are compliant with today's
+                      standards and they are constantly upgraded to include
+                      skills needed for students to be compentent in the modern
+                      world.
+                    </p>
+                  </div>
+                </li>
 
-                <div class="item-icon item-icon-1">
-                  <img src="./assets/images/about-icon-1.png" width="30" height="30" loading="lazy" aria-hidden="true">
-                </div>
+                <li class="about-item">
+                  <div class="item-icon item-icon-3">
+                    <img
+                      src="./assets/images/about-icon-3.png"
+                      width="30"
+                      height="30"
+                      loading="lazy"
+                      aria-hidden="true"
+                    />
+                  </div>
 
-                <div>
-                  <h3 class="h3 item-title">Industry Expert Instructors</h3>
+                  <div>
+                    <h3 class="h3 item-title">Biggest Student Community</h3>
 
-                  <p class="item-text">
-                    Our tutoring platform encompasses hundreds of courses from our qualified instructors and tutors
-                    in fields like STEM, English, French, Kinyarwanda and many more.
-                  </p>
-                </div>
+                    <p class="item-text">
+                      Join thousands of students on Schoolie and discuss on
+                      class work, class assignments and also engage in virtual
+                      group discussions.
+                    </p>
+                  </div>
+                </li>
+              </ul>
 
-              </li>
+              <a href="#" class="btn btn-primary">
+                <span class="span">Know About Us</span>
 
-              <li class="about-item">
-
-                <div class="item-icon item-icon-2">
-                  <img src="./assets/images/about-icon-2.png" width="30" height="30" loading="lazy" aria-hidden="true">
-                </div>
-
-                <div>
-                  <h3 class="h3 item-title">Up-to-Date Course Content</h3>
-
-                  <p class="item-text">
-                    Courses offered on Schoolie are compliant with today's standards and they are constantly upgraded to
-                    include skills needed for students to be compentent in the modern world.
-                  </p>
-                </div>
-
-              </li>
-
-              <li class="about-item">
-
-                <div class="item-icon item-icon-3">
-                  <img src="./assets/images/about-icon-3.png" width="30" height="30" loading="lazy" aria-hidden="true">
-                </div>
-
-                <div>
-                  <h3 class="h3 item-title">Biggest Student Community</h3>
-
-                  <p class="item-text">
-                    Join thousands of students on Schoolie and discuss on class work, class assignments and also engage
-                    in virtual group discussions.
-                  </p>
-                </div>
-
-              </li>
-
-            </ul>
-
-            <a href="#" class="btn btn-primary">
-              <span class="span">Know About Us</span>
-
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </div>
           </div>
+        </section>
 
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
+        <!-- 
         - #COURSE
       -->
 
-      <section class="section course" id="courses" aria-label="course"
-        style="background-image: url('./assets/images/course-bg.jpg')">
-        <div class="container">
+        <section
+          class="section course"
+          id="courses"
+          aria-label="course"
+          style="background-image: url('./assets/images/course-bg.jpg')"
+        >
+          <div class="container">
+            <p class="section-subtitle">Popular Courses</p>
 
-          <p class="section-subtitle">Popular Courses</p>
+            <h2 class="h2 section-title">Our Popular Courses</h2>
 
-          <h2 class="h2 section-title">Our Popular Courses</h2>
+            <ul class="grid-list">
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/math.png"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="Maths for all students"
+                      class="img-cover"
+                    />
+                  </figure>
 
-          <ul class="grid-list">
+                  <div class="card-actions">
+                    <span class="badge">Beginner</span>
 
-            <li>
-              <div class="course-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/math.png" width="370" height="270" loading="lazy"
-                    alt="Maths for all students" class="img-cover">
-                </figure>
-
-                <div class="card-actions">
-
-                  <span class="badge">Beginner</span>
-
-                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
-                    <ion-icon name="heart"></ion-icon>
-                  </button>
-
-                </div>
-
-                <div class="card-content">
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="card-meta-text">35 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <time datetime="PT18H15M44S" class="card-meta-text">18h 15m 44s</time>
-                    </li>
-
-                  </ul>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Introduction to Mathematics</a>
-                  </h3>
-
-                  <div class="rating-wrapper">
-
-                    <div class="rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <span class="rating-text">(18 Reviews)</span>
-
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
                   </div>
 
-                  <div class="card-footer">
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-                    <div class="card-price">
-                      <span class="span">5,000 Rwf</span>
+                        <span class="card-meta-text">35 Lessons</span>
+                      </li>
 
-                      <del class="del">8,000 Rwf</del>
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >18h 15m 44s</time
+                        >
+                      </li>
+                    </ul>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title"
+                        >Introduction to Mathematics</a
+                      >
+                    </h3>
+
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <span class="rating-text">(18 Reviews)</span>
                     </div>
 
-                    <div class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                    <div class="card-footer">
+                      <div class="card-price">
+                        <span class="span">5,000 Rwf</span>
 
-                      <span class="card-meta-text">47 Students</span>
+                        <del class="del">8,000 Rwf</del>
+                      </div>
+
+                      <div class="card-meta-item">
+                        <ion-icon
+                          name="people-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">47 Students</span>
+                      </div>
                     </div>
+                  </div>
+                </div>
+              </li>
 
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/set.png"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="Science Class"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-actions">
+                    <span class="badge">Intermediate</span>
+
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
                   </div>
 
-                </div>
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-              </div>
-            </li>
+                        <span class="card-meta-text">48 Lessons</span>
+                      </li>
 
-            <li>
-              <div class="course-card">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-                <figure class="card-banner">
-                  <img src="./assets/images/set.png" width="370" height="270" loading="lazy"
-                    alt="Science Class" class="img-cover">
-                </figure>
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >19h 15m 44s</time
+                        >
+                      </li>
+                    </ul>
 
-                <div class="card-actions">
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Introduction to Science</a>
+                    </h3>
 
-                  <span class="badge">Intermediate</span>
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
 
-                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
-                    <ion-icon name="heart"></ion-icon>
-                  </button>
-
-                </div>
-
-                <div class="card-content">
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="card-meta-text">48 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <time datetime="PT18H15M44S" class="card-meta-text">19h 15m 44s</time>
-                    </li>
-
-                  </ul>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Introduction to Science</a>
-                  </h3>
-
-                  <div class="rating-wrapper">
-
-                    <div class="rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
+                      <span class="rating-text">(20 Reviews)</span>
                     </div>
 
-                    <span class="rating-text">(20 Reviews)</span>
+                    <div class="card-footer">
+                      <div class="card-price">
+                        <span class="span">6,000 Rwf</span>
 
+                        <del class="del">9,000 Rwf</del>
+                      </div>
+
+                      <div class="card-meta-item">
+                        <ion-icon
+                          name="people-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">65 Students</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/eng.png"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="Achieving Advanced in Insights with Big"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-actions">
+                    <span class="badge">Basic</span>
+
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
                   </div>
 
-                  <div class="card-footer">
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-                    <div class="card-price">
-                      <span class="span">6,000 Rwf</span>
+                        <span class="card-meta-text">20 Lessons</span>
+                      </li>
 
-                      <del class="del">9,000 Rwf</del>
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >15h 15m 44s</time
+                        >
+                      </li>
+                    </ul>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">English for beginners</a>
+                    </h3>
+
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <span class="rating-text">(50 Reviews)</span>
                     </div>
 
-                    <div class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                    <div class="card-footer">
+                      <div class="card-price">
+                        <span class="span">5,000 Rwf</span>
 
-                      <span class="card-meta-text">65 Students</span>
+                        <del class="del">6,000 Rwf</del>
+                      </div>
+
+                      <div class="card-meta-item">
+                        <ion-icon
+                          name="people-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">42 Students</span>
+                      </div>
                     </div>
+                  </div>
+                </div>
+              </li>
 
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/code.jpg"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="Programming class"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-actions">
+                    <span class="badge">Beginners</span>
+
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
                   </div>
 
-                </div>
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-              </div>
-            </li>
+                        <span class="card-meta-text">31 Lessons</span>
+                      </li>
 
-            <li>
-              <div class="course-card">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-                <figure class="card-banner">
-                  <img src="./assets/images/eng.png" width="370" height="270" loading="lazy"
-                    alt="Achieving Advanced in Insights with Big" class="img-cover">
-                </figure>
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >18h 15m 44s</time
+                        >
+                      </li>
+                    </ul>
 
-                <div class="card-actions">
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Programming 101</a>
+                    </h3>
 
-                  <span class="badge">Basic</span>
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
 
-                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
-                    <ion-icon name="heart"></ion-icon>
-                  </button>
-
-                </div>
-
-                <div class="card-content">
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="card-meta-text">20 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <time datetime="PT18H15M44S" class="card-meta-text">15h 15m 44s</time>
-                    </li>
-
-                  </ul>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">English for beginners</a>
-                  </h3>
-
-                  <div class="rating-wrapper">
-
-                    <div class="rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
+                      <span class="rating-text">(80 Reviews)</span>
                     </div>
 
-                    <span class="rating-text">(50 Reviews)</span>
+                    <div class="card-footer">
+                      <div class="card-price">
+                        <span class="span">10,000 Rwf</span>
 
+                        <del class="del">16,000 Rwf</del>
+                      </div>
+
+                      <div class="card-meta-item">
+                        <ion-icon
+                          name="people-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">46 Students</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/kiny.avif"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="Building A Better World One Student At A Time"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-actions">
+                    <span class="badge">Intermediate</span>
+
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
                   </div>
 
-                  <div class="card-footer">
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-                    <div class="card-price">
-                      <span class="span">5,000 Rwf</span>
+                        <span class="card-meta-text">36 Lessons</span>
+                      </li>
 
-                      <del class="del">6,000 Rwf</del>
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >16h 15m 44s</time
+                        >
+                      </li>
+                    </ul>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Tumenye Ikinyarwanda</a>
+                    </h3>
+
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
+
+                      <span class="rating-text">(100 Reviews)</span>
                     </div>
 
-                    <div class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                    <div class="card-footer">
+                      <div class="card-price">
+                        <span class="span">3,000 Rwf</span>
 
-                      <span class="card-meta-text">42 Students</span>
+                        <del class="del">5,000 Rwf</del>
+                      </div>
+
+                      <div class="card-meta-item">
+                        <ion-icon
+                          name="people-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">91 Students</span>
+                      </div>
                     </div>
+                  </div>
+                </div>
+              </li>
 
+              <li>
+                <div class="course-card">
+                  <figure class="card-banner">
+                    <img
+                      src="./assets/images/kwivuga.jpg"
+                      width="370"
+                      height="270"
+                      loading="lazy"
+                      alt="Intore dance"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-actions">
+                    <span class="badge">Beginner</span>
+
+                    <button
+                      class="whishlist-btn"
+                      aria-label="Add to whishlist"
+                      data-whish-btn
+                    >
+                      <ion-icon name="heart"></ion-icon>
+                    </button>
                   </div>
 
-                </div>
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="reader-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-              </div>
-            </li>
+                        <span class="card-meta-text">21 Lessons</span>
+                      </li>
 
-            <li>
-              <div class="course-card">
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-                <figure class="card-banner">
-                  <img src="./assets/images/code.jpg" width="370" height="270" loading="lazy"
-                    alt="Programming class" class="img-cover">
-                </figure>
+                        <time datetime="PT18H15M44S" class="card-meta-text"
+                          >5h 15m 44s</time
+                        >
+                      </li>
+                    </ul>
 
-                <div class="card-actions">
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Kwivuga bya Kinyarwanda</a>
+                    </h3>
 
-                  <span class="badge">Beginners</span>
+                    <div class="rating-wrapper">
+                      <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </div>
 
-                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
-                    <ion-icon name="heart"></ion-icon>
-                  </button>
-
-                </div>
-
-                <div class="card-content">
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="card-meta-text">31 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <time datetime="PT18H15M44S" class="card-meta-text">18h 15m 44s</time>
-                    </li>
-
-                  </ul>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Programming 101</a>
-                  </h3>
-
-                  <div class="rating-wrapper">
-
-                    <div class="rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
+                      <span class="rating-text">(30 Reviews)</span>
                     </div>
 
-                    <span class="rating-text">(80 Reviews)</span>
+                    <div class="card-footer">
+                      <div class="card-price">
+                        <span class="span">5,000 Rwf</span>
 
+                        <del class="del">6,000 Rwf</del>
+                      </div>
+
+                      <div class="card-meta-item">
+                        <ion-icon
+                          name="people-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="card-meta-text">22 Students</span>
+                      </div>
+                    </div>
                   </div>
-
-                  <div class="card-footer">
-
-                    <div class="card-price">
-                      <span class="span">10,000 Rwf</span>
-
-                      <del class="del">16,000 Rwf</del>
-                    </div>
-
-                    <div class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="card-meta-text">46 Students</span>
-                    </div>
-
-                  </div>
-
                 </div>
+              </li>
+            </ul>
 
-              </div>
-            </li>
+            <a href="#" class="btn btn-primary">
+              <span class="span">View All Courses</span>
 
-            <li>
-              <div class="course-card">
+              <ion-icon
+                name="arrow-forward-outline"
+                aria-hidden="true"
+              ></ion-icon>
+            </a>
+          </div>
+        </section>
 
-                <figure class="card-banner">
-                  <img src="./assets/images/kiny.avif" width="370" height="270" loading="lazy"
-                    alt="Building A Better World One Student At A Time" class="img-cover">
-                </figure>
-
-                <div class="card-actions">
-
-                  <span class="badge">Intermediate</span>
-
-                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
-                    <ion-icon name="heart"></ion-icon>
-                  </button>
-
-                </div>
-
-                <div class="card-content">
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="card-meta-text">36 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <time datetime="PT18H15M44S" class="card-meta-text">16h 15m 44s</time>
-                    </li>
-
-                  </ul>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Tumenye Ikinyarwanda</a>
-                  </h3>
-
-                  <div class="rating-wrapper">
-
-                    <div class="rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <span class="rating-text">(100 Reviews)</span>
-
-                  </div>
-
-                  <div class="card-footer">
-
-                    <div class="card-price">
-                      <span class="span">3,000 Rwf</span>
-
-                      <del class="del">5,000 Rwf</del>
-                    </div>
-
-                    <div class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="card-meta-text">91 Students</span>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="course-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/kwivuga.jpg" width="370" height="270" loading="lazy"
-                    alt="Intore dance" class="img-cover">
-                </figure>
-
-                <div class="card-actions">
-
-                  <span class="badge">Beginner</span>
-
-                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
-                    <ion-icon name="heart"></ion-icon>
-                  </button>
-
-                </div>
-
-                <div class="card-content">
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="card-meta-text">21 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <time datetime="PT18H15M44S" class="card-meta-text">5h 15m 44s</time>
-                    </li>
-
-                  </ul>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Kwivuga bya Kinyarwanda</a>
-                  </h3>
-
-                  <div class="rating-wrapper">
-
-                    <div class="rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <span class="rating-text">(30 Reviews)</span>
-
-                  </div>
-
-                  <div class="card-footer">
-
-                    <div class="card-price">
-                      <span class="span">5,000 Rwf</span>
-
-                      <del class="del">6,000 Rwf</del>
-                    </div>
-
-                    <div class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="card-meta-text">22 Students</span>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-          <a href="#" class="btn btn-primary">
-            <span class="span">View All Courses</span>
-
-            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-          </a>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
+        <!-- 
         - #CTA
       -->
 
-      <section class="section cta" id="join"    aria-label="workshop" style="background-image: url('./assets/images/cta-bg.png')">
-        <div class="container">
+        <section
+          class="section cta"
+          id="join"
+          aria-label="workshop"
+          style="background-image: url('./assets/images/cta-bg.png')"
+        >
+          <div class="container">
+            <figure class="cta-banner">
+              <img
+                src="./assets/images/one.jfif"
+                width="580"
+                height="380"
+                loading="lazy"
+                alt="cta banner"
+                class="img-cover"
+              />
+            </figure>
 
-          <figure class="cta-banner">
-            <img src="./assets/images/one.jfif" width="580" height="380" loading="lazy" alt="cta banner"
-              class="img-cover">
-          </figure>
+            <div class="cta-content">
+              <p class="section-subtitle">Inclusive platform</p>
 
-          <div class="cta-content">
+              <h2 class="h2 section-title">Join Our platform!</h2>
 
-            <p class="section-subtitle">Inclusive platform</p>
+              <p class="section-text">
+                Thousands of students and parents trust Schoolie for their
+                learning needs. Get access to exclusive classes in academia,
+                languages and culture. Start by creating an account with us.
+              </p>
 
-            <h2 class="h2 section-title">Join Our platform!</h2>
+              <a href="#" class="btn btn-secondary">
+                <span class="span">Get Started</span>
 
-            <p class="section-text">
-              Thousands of students and parents trust Schoolie for their learning needs.
-              Get access to exclusive classes in academia, languages and culture. Start by creating an account with us.
-            </p>
-
-            <a href="#" class="btn btn-secondary">
-              <span class="span">Get Started</span>
-
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+            </div>
           </div>
+        </section>
 
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
+        <!-- 
         - #EVENT
       -->
 
-      <!-- <section class="section event" id="event" aria-label="event">
+        <!-- <section class="section event" id="event" aria-label="event">
         <div class="container">
 
           <p class="section-subtitle">Upcomming Event</p>
@@ -1093,282 +1177,275 @@
         </div>
       </section> -->
 
-
-
-
-
-      <!-- 
+        <!-- 
         - #NEWSLETTER
       -->
 
-      <section class="section newsletter"  id="contact"   aria-label="newsletter"
-        style="background-image: url('./assets/images/newsletter-bg.jpg')">
-        <div class="container">
+        <section
+          class="section newsletter"
+          id="contact"
+          aria-label="newsletter"
+          style="background-image: url('./assets/images/newsletter-bg.jpg')"
+        >
+          <div class="container">
+            <p class="section-subtitle">Subscribe Newsletter</p>
 
-          <p class="section-subtitle">Subscribe Newsletter</p>
+            <h2 class="h2 section-title">Get Every Latest News</h2>
 
-          <h2 class="h2 section-title">Get Every Latest News</h2>
+            <form action="" class="newsletter-form">
+              <div class="input-wrapper">
+                <input
+                  type="email"
+                  name="email_address"
+                  aria-label="email"
+                  placeholder="Enter your mail address"
+                  required
+                  class="email-field"
+                />
 
-          <form action="" class="newsletter-form">
+                <ion-icon
+                  name="mail-open-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </div>
 
-            <div class="input-wrapper">
-              <input type="email" name="email_address" aria-label="email" placeholder="Enter your mail address" required
-                class="email-field">
+              <button type="submit" class="btn btn-primary">
+                <span class="span">Subscribe</span>
 
-              <ion-icon name="mail-open-outline" aria-hidden="true"></ion-icon>
-            </div>
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </button>
+            </form>
+          </div>
+        </section>
+      </article>
+    </main>
 
-            <button type="submit" class="btn btn-primary">
-              <span class="span">Subscribe</span>
-
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </button>
-
-          </form>
-
-        </div>
-      </section>
-
-    </article>
-  </main>
-
-
-
-
-
-  <!-- 
+    <!-- 
     - #FOOTER
   -->
 
-  <footer class="footer" id="footer">
-    <div class="container">
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#" class="logo">Schoolie AI</a>
 
-      <div class="footer-top">
+            <p class="section-text">
+              Schoolie is an online tutoring platform offering services ranging
+              from AI tutor, virtual tutoring courses and Platform-As-A-Service
+              for tutors looking to make some extra cash teaching via our
+              platform.
+            </p>
 
-        <div class="footer-brand">
+            <ul class="social-list">
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
 
-          <a href="#" class="logo">Schoolie AI</a>
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
 
-          <p class="section-text">
-            Schoolie is an online tutoring platform offering services ranging from AI tutor, virtual tutoring courses and Platform-As-A-Service
-            for tutors looking to make some extra cash teaching via our platform.
-          </p>
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
 
-          <ul class="social-list">
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Explore</p>
+            </li>
 
             <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">About Us</span>
               </a>
             </li>
 
             <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Upcoming Events</span>
               </a>
             </li>
 
             <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Blog & News</span>
               </a>
             </li>
 
             <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">FAQ Question</span>
               </a>
             </li>
 
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Testimonial</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Privacy Policy</span>
+              </a>
+            </li>
           </ul>
 
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Useful Links</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Contact Us</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Pricing Plan</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Instructor Profile</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">FAQ</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Popular Courses</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                <span class="span">Terms & Conditions</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Contact Info</p>
+            </li>
+
+            <li class="footer-item">
+              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+              <address class="footer-link">
+                1 KN 78 St, Norrsken Kigali House
+              </address>
+            </li>
+
+            <li class="footer-item">
+              <ion-icon name="call" aria-hidden="true"></ion-icon>
+
+              <a href="tel:+13647657839" class="footer-link"
+                >+ 250 781 255 340</a
+              >
+            </li>
+
+            <li class="footer-item">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <a href="mailto:contact@eduhome.com" class="footer-link"
+                >contact@scholarly.co.rw</a
+              >
+            </li>
+          </ul>
         </div>
 
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Explore</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">About Us</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">Upcoming Events</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">Blog & News</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">FAQ Question</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">Testimonial</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">Privacy Policy</span>
-            </a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Useful Links</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">Contact Us</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">Pricing Plan</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">Instructor Profile</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">FAQ</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">Popular Courses</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">
-              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-              <span class="span">Terms & Conditions</span>
-            </a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Contact Info</p>
-          </li>
-
-          <li class="footer-item">
-            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-
-            <address class="footer-link">
-              1 KN 78 St, Norrsken Kigali House
-            </address>
-          </li>
-
-          <li class="footer-item">
-            <ion-icon name="call" aria-hidden="true"></ion-icon>
-
-            <a href="tel:+13647657839" class="footer-link">+ 250 781 255 340</a>
-          </li>
-
-
-          <li class="footer-item">
-            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-
-            <a href="mailto:contact@eduhome.com" class="footer-link">contact@scholarly.co.rw</a>
-          </li>
-
-        </ul>
-
+        <div class="footer-bottom">
+          <p class="copyright">Copyright 2024 Schoolie AI.</p>
+        </div>
       </div>
+    </footer>
 
-      <div class="footer-bottom">
-        <p class="copyright">
-          Copyright 2024 Schoolie AI.
-        </p>
-      </div>
-
-    </div>
-  </footer>
-
-
-
-
-
-  <!-- 
+    <!-- 
     - #BACK TO TOP
   -->
 
-  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
-    <ion-icon name="arrow-up"></ion-icon>
-  </a>
+    <a
+      href="#top"
+      class="back-top-btn"
+      aria-label="Back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="arrow-up"></ion-icon>
+    </a>
 
-
-
-
-
-  <!-- 
+    <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
 
-  <!-- 
+    <!-- 
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
 
-  <!--
+    <!--
   PulseQ
   -->
-  <my-widget project="1"></my-widget>
-<script src="https://pulse-q-widget.vercel.app/widget.umd.js"></script>
-
-</body>
-
+    <my-widget project="2"></my-widget>
+    <script src="https://pulse-q-widget.vercel.app/widget.umd.js"></script>
+  </body>
 </html>
